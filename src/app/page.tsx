@@ -1,7 +1,7 @@
 "use client";
 
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import Chat from "@/components/chat";
+import ChatWindow from "@/components/chat/ChatWindow";
 import { Button } from "@/components/ui/button";
 import {
   CheckCircle,
@@ -151,8 +151,8 @@ export default function Home() {
 
         {/* Chat Section */}
         <SignedIn>
-          <div className="mt-6 sm:mt-8">
-            <Chat />
+          <div className="mt-6 sm:mt-8 h-[600px]">
+            <ChatWindow />
           </div>
         </SignedIn>
       </main>

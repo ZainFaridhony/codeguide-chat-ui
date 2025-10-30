@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Parkinsans } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Provider } from "react-redux";
+import { store } from "@/store/store";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -45,7 +47,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <Provider store={store}>
+              {children}
+            </Provider>
           </ThemeProvider>
         </body>
       </html>
