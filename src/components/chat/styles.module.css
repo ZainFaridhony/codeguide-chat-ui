@@ -1,0 +1,135 @@
+/* Message container styles */
+.messageContainer {
+  @apply w-full px-4 py-6;
+}
+
+.userMessage {
+  @apply bg-background;
+}
+
+.assistantMessage {
+  @apply bg-muted/30;
+}
+
+/* Avatar styles */
+.avatar {
+  @apply w-8 h-8;
+}
+
+.avatarIcon {
+  @apply w-full h-full rounded-full flex items-center justify-center;
+}
+
+.userAvatar {
+  @apply bg-primary text-primary-foreground;
+}
+
+.assistantAvatar {
+  @apply bg-secondary text-secondary-foreground;
+}
+
+/* Message bubble styles */
+.messageBubble {
+  @apply rounded-lg px-4 py-3 break-words;
+}
+
+.userBubble {
+  @apply bg-primary text-primary-foreground ml-12;
+}
+
+.assistantBubble {
+  @apply bg-background border mr-12;
+}
+
+/* Code block styles */
+.codeBlock {
+  @apply relative rounded-lg overflow-hidden my-4;
+}
+
+.codeHeader {
+  @apply flex items-center justify-between bg-muted px-3 py-2 border-b;
+}
+
+.codeLanguage {
+  @apply text-xs font-medium text-muted-foreground;
+}
+
+.copyButton {
+  @apply h-6 w-6 p-0;
+}
+
+.syntaxHighlighter {
+  @apply text-sm;
+}
+
+.syntaxHighlighter :global(pre) {
+  @apply !bg-transparent !p-3 !m-0;
+}
+
+/* Inline code styles */
+.inlineCode {
+  @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+/* Link styles */
+.link {
+  @apply text-primary underline underline-offset-4 hover:text-primary/80 transition-colors;
+}
+
+/* List styles */
+.list {
+  @apply my-2 pl-6 space-y-1;
+}
+
+.list li {
+  @apply marker:text-muted-foreground;
+}
+
+/* Blockquote styles */
+.blockquote {
+  @apply border-l-4 border-primary pl-4 py-2 my-4 italic;
+}
+
+/* Table styles */
+.tableContainer {
+  @apply my-4 overflow-x-auto;
+}
+
+.table {
+  @apply min-w-full border-collapse;
+}
+
+.tableHeader {
+  @apply border bg-muted px-3 py-2 text-left font-medium;
+}
+
+.tableCell {
+  @apply border px-3 py-2;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .messageContainer {
+    @apply px-2 py-4;
+  }
+
+  .userBubble {
+    @apply ml-8;
+  }
+
+  .assistantBubble {
+    @apply mr-8;
+  }
+
+  .messageBubble {
+    @apply px-3 py-2;
+  }
+
+  .syntaxHighlighter {
+    @apply text-xs;
+  }
+
+  .syntaxHighlighter :global(pre) {
+    @apply !p-2;
+  }
+}
